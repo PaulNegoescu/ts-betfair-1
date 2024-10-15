@@ -12,9 +12,11 @@ interface OptionConfig {
   flavorText: [string];
 }
 
-type Options = {
-  [key in Choices]: OptionConfig;
-}
+// type Options = {
+//   [key in Choices]: OptionConfig;
+// }
+
+type Options = Record<Choices, OptionConfig>;
 
 const options: Options = {
   rock: {
